@@ -1,17 +1,17 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NeverOwned — Appliance Warranty Registration</title>
+<title>Never Owned — Appliance Warranty Registration</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0B2545;
-    --navy-soft:#13315C;
+    --navy:#123A6B;
+    --navy-soft:#1B4B85;
     --blue:#2F5FD9;
     --blue-dark:#2447AD;
     --gold:#C99B3D;
@@ -82,14 +82,17 @@
   <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
     <div class="flex items-center gap-2">
       <svg class="w-7 h-7 text-[var(--gold)]" viewBox="0 0 24 24" fill="none"><path d="M12 2l7 3v6c0 4.97-3.05 8.36-7 9-3.95-.64-7-4.03-7-9V5l7-3z" fill="currentColor"/></svg>
-      <span class="font-display font-bold text-white text-lg tracking-tight">Never Owned</span>
+      <span class="font-display font-bold text-white text-lg tracking-tight">EliteWarranty</span>
     </div>
     <nav class="hidden md:flex items-center gap-7 text-sm text-slate-300 font-medium">
       <a href="#" class="hover:text-white transition-colors">How it Works</a>
       <a href="#" class="hover:text-white transition-colors">Support</a>
       <a href="#" class="hover:text-white transition-colors">My Claims</a>
     </nav>
-    <button class="bg-[var(--gold)] hover:brightness-105 text-[var(--navy)] text-sm font-bold px-5 py-2 rounded-full transition">Sign In</button>
+    <div class="flex flex-col items-end gap-0.5">
+      <span class="text-[10px] uppercase tracking-wider text-slate-400 font-medium">Powered by</span>
+      <img src="write_path" alt="Company logo" class="h-7 w-auto object-contain">
+    </div>
   </div>
 </header>
 
@@ -109,44 +112,8 @@
         <div class="trust-stat text-left"><div class="num">5 yrs</div><div class="lbl">Max coverage</div></div>
       </div>
     </div>
-    <!-- Custom hero illustration: shield protecting appliances -->
-    <svg viewBox="0 0 420 300" class="w-full max-w-md mx-auto drop-shadow-2xl">
-      <defs>
-        <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#3A6BEB"/>
-          <stop offset="100%" stop-color="#1F3E8C"/>
-        </linearGradient>
-        <linearGradient id="cardGrad" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#ffffff"/>
-          <stop offset="100%" stop-color="#EEF2FB"/>
-        </linearGradient>
-      </defs>
-      <ellipse cx="210" cy="265" rx="150" ry="16" fill="#000" opacity="0.18"/>
-      <!-- Fridge -->
-      <g transform="translate(38,70)">
-        <rect x="0" y="0" width="70" height="130" rx="9" fill="url(#cardGrad)" stroke="#C9D2E3"/>
-        <line x1="0" y1="46" x2="70" y2="46" stroke="#C9D2E3" stroke-width="2"/>
-        <rect x="10" y="16" width="4" height="20" rx="2" fill="#9AA7C2"/>
-        <rect x="10" y="62" width="4" height="20" rx="2" fill="#9AA7C2"/>
-      </g>
-      <!-- Washing machine -->
-      <g transform="translate(312,86)">
-        <rect x="0" y="0" width="70" height="110" rx="9" fill="url(#cardGrad)" stroke="#C9D2E3"/>
-        <circle cx="35" cy="62" r="26" fill="#fff" stroke="#C9D2E3" stroke-width="2"/>
-        <circle cx="35" cy="62" r="17" fill="none" stroke="#9AA7C2" stroke-width="2.5"/>
-        <circle cx="12" cy="14" r="4" fill="#9AA7C2"/>
-        <circle cx="26" cy="14" r="4" fill="#C99B3D"/>
-      </g>
-      <!-- Shield -->
-      <g transform="translate(140,10)">
-        <path d="M70 0 L136 26 V80 C136 130 106 165 70 180 C34 165 4 130 4 80 V26 Z" fill="url(#shieldGrad)"/>
-        <path d="M70 8 L128 31 V80 C128 125 101 156 70 170 C39 156 12 125 12 80 V31 Z" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="2"/>
-        <path d="M45 88 L62 106 L98 62" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-      </g>
-      <!-- Sparkle accents -->
-      <circle cx="196" cy="24" r="3" fill="#C99B3D"/>
-      <circle cx="252" cy="46" r="2.4" fill="#C99B3D"/>
-    </svg>
+    <!-- Hero image: replace src with your own artwork -->
+    <img src="img_path" alt="Appliance protection illustration" class="w-full max-w-md mx-auto drop-shadow-2xl">
   </div>
 </div>
 
@@ -253,15 +220,14 @@
         </select>
       </div>
       <div class="field-wrap">
-        <span class="field-label">Manufacturer</span>
-        <select id="manufacturer" class="field">
-          <option>Apple</option><option>Samsung Electronics</option><option>LG Electronics</option><option>Whirlpool Corp</option>
-        </select>
-      </div>
-      <div class="field-wrap">
         <span class="field-label">Serial Number</span>
         <input id="serialNumber" class="field mono" placeholder="SN-XXXX-XXXX-XXXX" maxlength="17" required>
         <div class="err-msg" data-err="serialNumber"></div>
+      </div>
+      <div class="field-wrap">
+        <span class="field-label">Product Invoice Value (Inclusive of GST)</span>
+        <input id="invoiceValue" class="field" inputmode="decimal" placeholder="e.g. 45000" required>
+        <div class="err-msg" data-err="invoiceValue"></div>
       </div>
     </div>
   </section>
@@ -290,8 +256,10 @@
       </h2>
       <div class="relative bg-[var(--navy)] rounded-xl overflow-hidden aspect-video flex items-center justify-center">
         <video id="cameraPreview" class="absolute inset-0 w-full h-full object-cover hidden" autoplay playsinline muted></video>
-        <canvas id="captureCanvas" class="hidden"></canvas>
-        <img id="capturedThumb" class="absolute inset-0 w-full h-full object-cover hidden">
+        <video id="recordedPreview" class="absolute inset-0 w-full h-full object-cover hidden" controls playsinline></video>
+        <div id="recIndicator" class="hidden absolute top-3 left-3 flex items-center gap-1.5 bg-black/50 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+          <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> REC
+        </div>
         <div id="cameraPlaceholder" class="text-center text-slate-400 px-4">
           <svg class="w-8 h-8 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.6"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.55-2.28A1 1 0 0121 8.6v6.8a1 1 0 01-1.45.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/><line x1="3" y1="3" x2="21" y2="21" stroke-linecap="round"/></svg>
           <p class="text-xs">Camera access required</p>
@@ -299,14 +267,14 @@
       </div>
       <div class="flex gap-2 mt-3.5">
         <button type="button" id="captureBtn" class="flex-1 bg-[var(--blue)] hover:bg-[var(--blue-dark)] text-white text-sm font-semibold rounded-full py-2.5 flex items-center justify-center gap-1.5 transition">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><circle cx="12" cy="13" r="3.2"/></svg>
-          Capture
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.55-2.28A1 1 0 0121 8.6v6.8a1 1 0 01-1.45.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          Record Video
         </button>
         <button type="button" id="uploadVideoBtn" class="flex-1 bg-[var(--navy)] hover:bg-[var(--navy-soft)] text-white text-sm font-semibold rounded-full py-2.5 flex items-center justify-center gap-1.5 transition">
           <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1M12 12V3m0 0L8 7m4-4l4 4"/></svg>
           Upload
         </button>
-        <input type="file" id="videoInput" class="hidden" accept="video/*,image/*">
+        <input type="file" id="videoInput" class="hidden" accept="video/*">
       </div>
       <p class="err-msg" data-err="camera"></p>
     </div>
@@ -368,6 +336,7 @@
     state: v => v.trim().length >= 2 || 'Enter a state',
     pinCode: v => /^\d{5,6}$/.test(v) || 'Enter a valid pin code',
     serialNumber: v => v.trim().length >= 4 || 'Enter the product serial number',
+    invoiceValue: v => /^\d+(\.\d{1,2})?$/.test(v.trim()) && parseFloat(v) > 0 || 'Enter a valid invoice amount',
   };
 
   function validateField(id){
@@ -442,24 +411,39 @@
     dropzone.classList.add('border-emerald-400');
   }
 
-  // ---------- Live camera capture ----------
+  // ---------- Live camera video recording ----------
   const cameraPreview = $('cameraPreview');
+  const recordedPreview = $('recordedPreview');
   const cameraPlaceholder = $('cameraPlaceholder');
-  const capturedThumb = $('capturedThumb');
+  const recIndicator = $('recIndicator');
   const captureBtn = $('captureBtn');
   const uploadVideoBtn = $('uploadVideoBtn');
   const videoInput = $('videoInput');
-  const captureCanvas = $('captureCanvas');
   let stream = null;
+  let mediaRecorder = null;
+  let recordedChunks = [];
+  let isRecording = false;
+  let productVideoFile = null;
+
+  function setRecordBtnState(state){
+    // state: 'idle' | 'recording' | 'retake'
+    if (state === 'recording'){
+      captureBtn.innerHTML = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="7" y="7" width="10" height="10" rx="1.5" fill="currentColor" stroke="none"/></svg> Stop Recording';
+    } else if (state === 'retake'){
+      captureBtn.innerHTML = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg> Record Again';
+    } else {
+      captureBtn.innerHTML = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.55-2.28A1 1 0 0121 8.6v6.8a1 1 0 01-1.45.9L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg> Record Video';
+    }
+  }
 
   async function startCamera(){
     const errEl = document.querySelector('[data-err="camera"]');
     try {
-      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+      stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: true });
       cameraPreview.srcObject = stream;
       cameraPreview.classList.remove('hidden');
+      recordedPreview.classList.add('hidden');
       cameraPlaceholder.classList.add('hidden');
-      capturedThumb.classList.add('hidden');
       errEl.textContent = '';
       return true;
     } catch (err){
@@ -468,41 +452,53 @@
     }
   }
 
+  function startRecording(){
+    recordedChunks = [];
+    const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9,opus')
+      ? 'video/webm;codecs=vp9,opus' : 'video/webm';
+    mediaRecorder = new MediaRecorder(stream, { mimeType });
+    mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+    mediaRecorder.onstop = () => {
+      const blob = new Blob(recordedChunks, { type: mimeType });
+      productVideoFile = blob;
+      const url = URL.createObjectURL(blob);
+      recordedPreview.src = url;
+      recordedPreview.classList.remove('hidden');
+      cameraPreview.classList.add('hidden');
+      recIndicator.classList.add('hidden');
+      if (stream){ stream.getTracks().forEach(t => t.stop()); stream = null; }
+      setRecordBtnState('retake');
+      isRecording = false;
+    };
+    mediaRecorder.start();
+    recIndicator.classList.remove('hidden');
+    setRecordBtnState('recording');
+    isRecording = true;
+  }
+
   captureBtn.addEventListener('click', async () => {
-    if (!stream){
-      const ok = await startCamera();
-      if (ok) captureBtn.textContent = 'Snap Photo';
+    if (isRecording){
+      mediaRecorder.stop();
       return;
     }
-    captureCanvas.width = cameraPreview.videoWidth || 640;
-    captureCanvas.height = cameraPreview.videoHeight || 360;
-    const ctx = captureCanvas.getContext('2d');
-    ctx.drawImage(cameraPreview, 0, 0, captureCanvas.width, captureCanvas.height);
-    capturedThumb.src = captureCanvas.toDataURL('image/png');
-    capturedThumb.classList.remove('hidden');
-    cameraPreview.classList.add('hidden');
-    stream.getTracks().forEach(t => t.stop());
-    stream = null;
-    captureBtn.innerHTML = '<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg> Retake';
+    if (!stream){
+      const ok = await startCamera();
+      if (!ok) return;
+    }
+    startRecording();
   });
 
   uploadVideoBtn.addEventListener('click', () => videoInput.click());
   videoInput.addEventListener('change', (e) => {
     const file = e.target.files[0];
     if (!file) return;
+    productVideoFile = file;
     const url = URL.createObjectURL(file);
-    if (file.type.startsWith('image/')){
-      capturedThumb.src = url;
-      capturedThumb.classList.remove('hidden');
-      cameraPreview.classList.add('hidden');
-      cameraPlaceholder.classList.add('hidden');
-    } else {
-      cameraPreview.src = url;
-      cameraPreview.classList.remove('hidden');
-      capturedThumb.classList.add('hidden');
-      cameraPlaceholder.classList.add('hidden');
-      cameraPreview.play();
-    }
+    recordedPreview.src = url;
+    recordedPreview.classList.remove('hidden');
+    cameraPreview.classList.add('hidden');
+    cameraPlaceholder.classList.add('hidden');
+    setRecordBtnState('retake');
   });
 
   // ---------- Live summary ----------
