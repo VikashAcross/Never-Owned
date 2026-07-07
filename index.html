@@ -290,7 +290,7 @@
     <div class="relative">
       <div class="summary-row"><span class="text-[var(--muted)]">Customer</span><span id="sumCustomer" class="font-semibold">—</span></div>
       <div class="summary-row"><span class="text-[var(--muted)]">Product</span><span id="sumProduct" class="font-semibold">—</span></div>
-      <div class="summary-row"><span class="text-[var(--muted)]">Warranty Type</span><span id="sumWarranty" class="font-semibold text-[var(--blue-dark)]">Standard Brand (1 Year)</span></div>
+      <div class="summary-row"><span class="text-[var(--muted)]">Warranty Type</span><span id="sumWarranty" class="font-semibold text-[var(--blue-dark)]">Brand Warranty (1 Year)</span></div>
     </div>
     <label class="relative flex items-start gap-2.5 mt-4 text-sm text-[var(--muted)] cursor-pointer">
       <input type="checkbox" id="confirmCheck" class="mt-0.5 w-4 h-4 rounded border-slate-300 text-[var(--blue)] focus:ring-[var(--blue)]">
@@ -512,7 +512,7 @@
     $('sumCustomer').textContent = $('customerName').value.trim() || '—';
     $('sumProduct').textContent = productLabels() || '—';
     if (warrantyType === 'brand'){
-      $('sumWarranty').textContent = 'Standard Brand (1 Year)';
+      $('sumWarranty').textContent = 'Brand Warranty (1 Year)';
     } else {
       const years = $('extendedYears').value;
       $('sumWarranty').textContent = `Extended Warranty (${years})`;
